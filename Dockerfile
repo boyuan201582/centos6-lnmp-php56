@@ -40,6 +40,9 @@ RUN yum -y install php56w php56w-fpm php56w-mbstring php56w-xml php56w-mysql php
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 RUN yum -y install php56w-mssql php56w-mcrypt
 
+# Install php-redis
+RUN rpm -Uvh https://dl.fedoraproject.org/
+RUN yum -y install php-redis
 
 # Install nginx
 RUN rpm --import http://ftp.riken.jp/Linux/fedora/epel/RPM-GPG-KEY-EPEL-6 && \
